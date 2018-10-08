@@ -17,9 +17,9 @@ if (hashArray.length === 2) {
 }
 
 interface IState {
-	active:string,
-	collapsed: boolean,
-	openKeys: string[],
+	active:string
+	collapsed: boolean
+	openKeys: string[]
 }
 export default class Sider extends React.Component<any, any> {
 

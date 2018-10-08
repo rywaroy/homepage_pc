@@ -5,10 +5,10 @@ interface IStore {
 }
 
 class Store {
-  public loadingStore: ILoading
+  public loading: ILoading
 
   constructor() {
-    this.loadingStore = new Loading();
+    this.loading = new Loading();
   }
 }
 

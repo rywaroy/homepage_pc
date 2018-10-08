@@ -21,11 +21,18 @@ interface IState {
 	collapsed: boolean,
 	openKeys: string[],
 }
-export default class Sider extends React.Component {
+export default class Sider extends React.Component<any, any> {
+
 	public state:IState = {
 		active,
 		collapsed: false,
 		openKeys: [open],
+	}
+
+	constructor(props:any) {
+		super(props);
+		this._onSelect = this._onSelect.bind(this);
+		this._onOpenChange = this._onOpenChange.bind(this)
 	}
 
 	public toggleCollapsed():void {
@@ -62,8 +69,8 @@ export default class Sider extends React.Component {
 					theme="dark"
 					openKeys={this.state.openKeys}
 					selectedKeys={[this.state.active]}
-					onSelect={this._onSelect.bind(this)}
-					onOpenChange={this._onOpenChange.bind(this)}
+					onSelect={this._onSelect}
+					onOpenChange={this._onOpenChange}
 				>
 					<SubMenu key="magazine" title={<span><Icon type="pie-chart"/><span>杂志</span></span>}>
 						<Menu.Item key="one"><Link to='/magazine/one'>ONE · 一个</Link></Menu.Item>

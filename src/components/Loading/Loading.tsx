@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { observer, inject } from 'mobx-react';
-import { IStore } from '../../store';
+import loadingStore from '../../store/loading';
 import './loading.css';
 
-@inject((store: IStore) => ({
-  ...store.loading
-}))
+interface ILoading {
+	loading: loadingStore
+}
+
+@inject('loading')
 @observer
-export default class Loading extends React.Component {
+export default class Loading extends React.Component<any, ILoading> {
 	public render() {
-    const loading:any  = this.props;
 		return (
-			<div className="loading" style={{display: loading.active ? 'block' : 'none'}}>
+			<div className="loading" style={{display: this.props.loading.active ? 'block' : 'none'}}>
 				<div className="loading__dog" />
 			</div>
 		)

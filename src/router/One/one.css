@@ -1,0 +1,95 @@
+.one__content {
+  padding: 20px 0px 50px 0px;
+}
+
+.one__item {
+  width: 100%;
+  display: block;
+  min-height: 400px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 16px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.one__item:hover {
+  box-shadow: 1px 5px 20px rgba(0, 0, 0, .2);
+}
+
+.one__item-tag {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.one__item-inb-title {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.one__item-inb-word {
+  font-size: 12px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.one__item-inb-book {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.one__item-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+
+.one__item-author {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.one__item-forward {
+  font-size: 12px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.one__item-music-box {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.one__header {
+  margin-bottom: 20px;
+}
+
+.one__from {
+  float: left;
+  font-size: 12px;
+  line-height: 28px;
+}
+
+.one__last {
+  font-size: 14px;
+  line-height: 32px;
+  color: #666;
+}
+
+.one__item-img {
+  display: block;
+  max-height: 180px;
+}

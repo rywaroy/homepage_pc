@@ -1,21 +1,22 @@
 import * as React from 'react';
 import { Row, Col, DatePicker } from 'antd';
 import { observer, inject } from 'mobx-react';
+import { RouteComponentProps } from 'react-router-dom';
 import axios from '../../utils/axios';
 import oneStore from '../../store/one';
 import * as dayjs from 'dayjs';
 import './one.css';
 
-interface IOne {
-  one: oneStore
+interface IOne extends RouteComponentProps {
+	one: oneStore
 }
 
 @inject('one')
 @observer
-export default class One extends React.Component<any, IOne> {
+export default class One extends React.Component<IOne, any> {
 
   public componentDidMount() {
-    this.getInfo();
+    this.props.one.list.length === 0 && this.getInfo();
   }
 
   public getInfo() { // 获取one列表

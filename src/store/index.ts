@@ -1,20 +1,27 @@
-import Loading, { ILoading } from './loading';
-import One, { IOne } from './one';
+import Loading from './loading';
+import One from './one';
 
-interface IStore {
-  loading: ILoading
-  one: IOne
+// interface IStore {
+//   loading: ILoading
+//   one: IOne
+// }
+
+// class Store {
+//   public loading: ILoading
+//   public one: IOne
+
+//   constructor() {
+//     this.loading = new Loading();
+//     this.one = new One();
+//   }
+// }
+
+// export default new Store();
+// export { IStore, ILoading, IOne };
+
+const Store = {
+  loading: new Loading(),
+  one: new One(),
 }
 
-class Store {
-  public loading: ILoading
-  public one: IOne
-
-  constructor() {
-    this.loading = new Loading();
-    this.one = new One();
-  }
-}
-
-export default new Store();
-export { IStore, ILoading, IOne };
+export default Store;

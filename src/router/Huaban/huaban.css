@@ -1,0 +1,22 @@
+.huaban {
+  padding: 30px 0;
+}
+
+.huaban__item {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.huaban__img {
+  display: block;
+}
+
+.huaban__top {
+  padding-top: 30px;
+  font-size: 18px;
+  color: #666;
+}
+
+.huaban__change {
+  cursor: pointer;
+}

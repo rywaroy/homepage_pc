@@ -1,27 +1,11 @@
 import Loading from './loading';
 import One from './one';
-
-// interface IStore {
-//   loading: ILoading
-//   one: IOne
-// }
-
-// class Store {
-//   public loading: ILoading
-//   public one: IOne
-
-//   constructor() {
-//     this.loading = new Loading();
-//     this.one = new One();
-//   }
-// }
-
-// export default new Store();
-// export { IStore, ILoading, IOne };
+import Huaban from './huaban';
 
 const Store = {
   loading: new Loading(),
   one: new One(),
+  huaban: new Huaban(),
 }
 
 export default Store;

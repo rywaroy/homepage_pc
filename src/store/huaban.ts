@@ -1,6 +1,6 @@
 import { observable, action } from 'mobx';
 
-export default class One {
+export default class Huaban {
 
   @observable public list: any[] = [];
   @observable public opacity: number = 0;

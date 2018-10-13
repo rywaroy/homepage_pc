@@ -3,7 +3,8 @@ import * as Masonry from 'masonry-layout';
 import { Row, Col, Icon } from 'antd';
 import { observer, inject } from 'mobx-react';
 import { RouteComponentProps } from 'react-router-dom';
-import axios from 'axios'
+import axios from 'axios';
+import ImgPreview from '../../components/ImgPreview/ImgPreview';
 import huabanStore from '../../store/huaban';
 import loadingStore from '../../store/loading';
 import './huaban.css';
@@ -69,7 +70,7 @@ export default class Huaban extends React.Component<IHuanban, IState> {
   }
 
   public allImgLoad(callback: () => void) {
-    const imgs: NodeListOf<HTMLElement> = document.querySelectorAll('.huaban-img');
+    const imgs: NodeListOf<HTMLElement> = document.querySelectorAll('.huaban__img');
     for (let i = 0; i < imgs.length; i++) {
       if (imgs[i].offsetHeight === 0) {
         this.isLoad = false;
@@ -94,6 +95,10 @@ export default class Huaban extends React.Component<IHuanban, IState> {
 		this.setState({ imgPreview: true });
   }
 
+  public close() { // 关闭
+		this.setState({ imgPreview: false });
+	}
+
   render() {
 		return (
 			<Row>
@@ -113,7 +118,12 @@ export default class Huaban extends React.Component<IHuanban, IState> {
 							))
 						}
 					</div>
-
+          {
+						this.state.imgPreview ?
+							<ImgPreview imgs={this.imgs} index={this.index} close={this.close.bind(this)} />
+							:
+							null
+					}
 				</Col>
 				<Col span={2} />
 			</Row>

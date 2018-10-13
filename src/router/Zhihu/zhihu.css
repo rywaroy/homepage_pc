@@ -1,0 +1,18 @@
+
+.zhihu {
+  margin-top: 10px;
+}
+
+.zhihu__item {
+  width: 300px;
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.zhihu__info {
+  font-size: 18px;
+  color: #333;
+  line-height: 30px;
+}

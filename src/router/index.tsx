@@ -5,6 +5,7 @@ import OneInfo from './One/Info';
 import Huaban from './Huaban/Huaban';
 import Zhihu from './Zhihu/Zhihu';
 import ZhihuInfo from './Zhihu/Info';
+import Time from './Time/Time';
 
 export default class Root extends React.Component<any, any> {
   public render() {
@@ -15,6 +16,7 @@ export default class Root extends React.Component<any, any> {
         <Route exact={true} path="/magazine/huaban" component={Huaban} />
         <Route exact={true} path="/magazine/zhihu" component={Zhihu} />
         <Route exact={true} path="/magazine/zhihu/info/:id" component={ZhihuInfo} />
+        <Route exact={true} path="/movie/time" component={Time} />
       </Switch>
     )
   }

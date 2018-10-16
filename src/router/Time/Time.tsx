@@ -5,6 +5,8 @@ import { observer, inject } from 'mobx-react';
 import timeStore from '../../store/time';
 import loadingStore from '../../store/loading';
 import Sell from './Sell';
+import Hot from './Hot';
+import Soon from './Soon';
 import './time.css';
 
 const TabPane = Tabs.TabPane;
@@ -19,7 +21,6 @@ interface IProps extends RouteComponentProps {
 export default class Time extends React.Component <IProps, any> {
 
   render() {
-    // console.log(this.props)
 		return (
 			<div className="card__content">
 				<Row>
@@ -31,10 +32,10 @@ export default class Time extends React.Component <IProps, any> {
 									<Sell {...this.props} />
 								</TabPane>
 								<TabPane tab="正在热映" key="2">
-									{/* <Hot {...this.props} /> */}
+									<Hot {...this.props} />
 								</TabPane>
 								<TabPane tab="即将上映" key="3">
-									{/* <Soon {...this.props} /> */}
+									<Soon {...this.props} />
 								</TabPane>
 							</Tabs>
 						</div>

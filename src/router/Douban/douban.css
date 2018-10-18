@@ -1,0 +1,28 @@
+.douban__list-item {
+  font-size: 12px;
+  line-height: 22px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.douban__cast {
+  color: #333
+}
+
+.douban__cast-item {
+  margin-right: 5px;
+}
+
+.douban__list-content {
+  height: 180px;
+  margin-top: 10px;
+}
+
+.douban__top {
+  padding-top: 20px;
+}
+
+.douban__content {
+  padding: 20px 0 50px 0;
+}

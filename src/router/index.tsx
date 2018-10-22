@@ -8,6 +8,7 @@ import ZhihuInfo from './Zhihu/Info';
 import Time from './Time/Time';
 import TimeInfo from './Time/Info';
 import Douban from './Douban/Douban';
+import DoubanInfo from './Douban/Info';
 
 export default class Root extends React.Component<any, any> {
   public render() {
@@ -21,6 +22,7 @@ export default class Root extends React.Component<any, any> {
         <Route exact={true} path="/movie/time" component={Time} />
         <Route exact={true} path="/movie/time/info/:id" component={TimeInfo} />
         <Route exact={true} path="/movie/douban" component={Douban} />
+        <Route exact={true} path="/movie/douban/info/:id" component={DoubanInfo} />
       </Switch>
     )
   }

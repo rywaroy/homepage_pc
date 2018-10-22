@@ -1,0 +1,62 @@
+.douban__title {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.douban__en-title {
+  font-size: 14px;
+  color: #999;
+  line-height: 25px;
+}
+
+.douban__info {
+  padding-top: 40px;
+}
+
+.douban__intro {
+  margin-top: 30px;
+}
+
+.douban__cell {
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.douban__info-intro-item {
+  margin-right: 5px;
+}
+
+.douban__info-p-item {
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+}
+
+.douban__info-p-img {
+  display: block;
+}
+
+.douban__info-image {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 200px;
+}
+
+.douban__subtitle {
+  font-size: 20px;
+  padding: 20px 0;
+  line-height: 34px;
+  color: #333
+}
+
+.douban__info-summary {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #666;
+}
+
+.douban__info-page {
+  padding: 20px 0
+}

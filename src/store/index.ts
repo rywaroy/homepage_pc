@@ -4,6 +4,7 @@ import Huaban from './huaban';
 import Zhihu from './zhihu';
 import Time from './time';
 import Douban from './douban';
+import Dytt from './dytt';
 
 const Store = {
   loading: new Loading(),
@@ -12,6 +13,7 @@ const Store = {
   zhihu: new Zhihu(),
   time: new Time(),
   douban: new Douban(),
+  dytt: new Dytt(),
 }
 
 export default Store;

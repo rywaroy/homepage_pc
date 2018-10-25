@@ -9,6 +9,8 @@ import Time from './Time/Time';
 import TimeInfo from './Time/Info';
 import Douban from './Douban/Douban';
 import DoubanInfo from './Douban/Info';
+// import Dytt from './Dytt/Dytt';
+import Learn from './Learn/Learn';
 
 export default class Root extends React.Component<any, any> {
   public render() {
@@ -23,6 +25,8 @@ export default class Root extends React.Component<any, any> {
         <Route exact={true} path="/movie/time/info/:id" component={TimeInfo} />
         <Route exact={true} path="/movie/douban" component={Douban} />
         <Route exact={true} path="/movie/douban/info/:id" component={DoubanInfo} />
+        {/* <Route exact={true} path="/movie/dytt" component={Dytt} /> */}
+        <Route exact={true} path="/blog/learn" component={Learn} />
       </Switch>
     )
   }

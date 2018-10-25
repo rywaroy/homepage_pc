@@ -5,6 +5,7 @@ import Zhihu from './zhihu';
 import Time from './time';
 import Douban from './douban';
 import Dytt from './dytt';
+import Learn from './learn';
 
 const Store = {
   loading: new Loading(),
@@ -14,6 +15,7 @@ const Store = {
   time: new Time(),
   douban: new Douban(),
   dytt: new Dytt(),
+  learn: new Learn(),
 }
 
 export default Store;

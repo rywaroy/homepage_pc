@@ -11,6 +11,7 @@ import Douban from './Douban/Douban';
 import DoubanInfo from './Douban/Info';
 // import Dytt from './Dytt/Dytt';
 import Learn from './Learn/Learn';
+import LearnInfo from './Learn/Info';
 
 export default class Root extends React.Component<any, any> {
   public render() {
@@ -27,6 +28,7 @@ export default class Root extends React.Component<any, any> {
         <Route exact={true} path="/movie/douban/info/:id" component={DoubanInfo} />
         {/* <Route exact={true} path="/movie/dytt" component={Dytt} /> */}
         <Route exact={true} path="/blog/learn" component={Learn} />
+        <Route exact={true} path="/blog/learn/info/:id" component={LearnInfo} />
       </Switch>
     )
   }

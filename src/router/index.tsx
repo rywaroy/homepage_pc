@@ -12,6 +12,7 @@ import DoubanInfo from './Douban/Info';
 // import Dytt from './Dytt/Dytt';
 import Learn from './Learn/Learn';
 import LearnInfo from './Learn/Info';
+import Article from './Article/Article';
 
 export default class Root extends React.Component<any, any> {
   public render() {
@@ -29,6 +30,7 @@ export default class Root extends React.Component<any, any> {
         {/* <Route exact={true} path="/movie/dytt" component={Dytt} /> */}
         <Route exact={true} path="/blog/learn" component={Learn} />
         <Route exact={true} path="/blog/learn/info/:id" component={LearnInfo} />
+        <Route exact={true} path="/blog/article" component={Article} />
       </Switch>
     )
   }

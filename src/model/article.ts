@@ -8,7 +8,21 @@ export interface IList {
   top: number
 }
 
+export interface IInfoState {
+  title: string
+  content: string
+  name: string
+  commentContent: string
+  comment: IComment[]
+}
+
 interface ITag {
   color: string
   title: string
+}
+
+export interface IComment {
+  name: string,
+  time: string
+  content: string
 }

@@ -14,6 +14,10 @@ import Learn from './Learn/Learn';
 import LearnInfo from './Learn/Info';
 import Article from './Article/Article';
 import ArticleInfo from './Article/Info';
+import Album from './Album/Album';
+import Group from './Album/Group';
+import Think from './Think/Think';
+import Plan from './Plan/Plan';
 
 export default class Root extends React.Component<any, any> {
   public render() {
@@ -33,6 +37,11 @@ export default class Root extends React.Component<any, any> {
         <Route exact={true} path="/blog/learn/info/:id" component={LearnInfo} />
         <Route exact={true} path="/blog/article" component={Article} />
         <Route exact={true} path="/blog/article/info/:id" component={ArticleInfo} />
+        <Route exact={true} path="/blog/album" component={Album} />
+				<Route exact={true} path="/blog/album/group/:id" component={Group} />
+        <Route exact={true} path="/blog/think" component={Think} />
+				<Route exact={true} path="/blog/plan" component={Plan} />
+        <Route component={Learn} />
       </Switch>
     )
   }

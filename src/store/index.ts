@@ -8,6 +8,7 @@ import Dytt from './dytt';
 import Learn from './learn';
 import Article from './article';
 import Think from './think';
+import Plan from './plan';
 
 const Store = {
   loading: new Loading(),
@@ -20,6 +21,7 @@ const Store = {
   learn: new Learn(),
   article: new Article(),
   think: new Think(),
+  plan: new Plan(),
 }
 
 export default Store;

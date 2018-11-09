@@ -12,7 +12,7 @@ interface IPorps extends RouteComponentProps {
   plan: planStore
 }
 
-@inject('think')
+@inject('plan')
 @observer
 export default class Plan extends React.Component<IPorps, any> {
 

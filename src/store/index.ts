@@ -9,6 +9,7 @@ import Learn from './learn';
 import Article from './article';
 import Think from './think';
 import Plan from './plan';
+import Album from './album';
 
 const Store = {
   loading: new Loading(),
@@ -22,6 +23,7 @@ const Store = {
   article: new Article(),
   think: new Think(),
   plan: new Plan(),
+  album: new Album(),
 }
 
 export default Store;

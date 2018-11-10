@@ -6,7 +6,6 @@ import Menu from './components/Menu/Menu';
 import Loading from './components/Loading/Loading';
 import { Provider } from 'mobx-react';
 import store from './store';
-import 'antd/dist/antd.css';
 import './App.css';
 
 const {Header, Footer, Sider, Content} = Layout;

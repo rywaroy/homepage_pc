@@ -23,30 +23,24 @@ export default class Info extends React.Component<any, IInfoState> {
 
 	// 获取详情
 	public getInfo() {
-		axios.get('article/info', {
-			params: {
-				id: this.props.match.params.id,
-			},
-		}).then(res => {
-			const data = res.data.data;
-			this.setState({
-				title: data.title,
-				content: data.content,
+		axios.get(`article/${this.props.match.params.id}`)
+			.then(res => {
+				const data = res.data.data;
+				this.setState({
+					title: data.title,
+					content: data.content,
+				});
 			});
-		});
 	}
 
 	// 获取评论
 	public getComment() {
-		axios.get('article/comment', {
-			params: {
-				id: this.props.match.params.id,
-			},
-		}).then(res => {
-			this.setState({
-				comment: res.data.data,
+		axios.get(`article/${this.props.match.params.id}/comment`)
+			.then(res => {
+				this.setState({
+					comment: res.data.data,
+				});
 			});
-		});
 	}
 
 	// 提交评论
@@ -55,8 +49,7 @@ export default class Info extends React.Component<any, IInfoState> {
 			message.error('请输入评论内容');
 			return;
 		}
-		axios.post('article/comment', {
-			id: this.props.match.params.id,
+		axios.post(`article/${this.props.match.params.id}/comment`, {
 			name: this.state.name,
 			content: this.state.commentContent,
 		}).then(res => {

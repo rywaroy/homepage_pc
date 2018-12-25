@@ -21,7 +21,7 @@ export default class Article extends React.Component<IPorps, any> {
 
 	// 获取文章列表
 	getList() {
-		axios.get('article/list', {
+		axios.get('article', {
 			params: {
 				page: this.props.article.page,
 				limit: this.props.article.limit,

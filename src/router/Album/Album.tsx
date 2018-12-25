@@ -21,7 +21,7 @@ export default class Album extends React.Component<IPorps, any> {
 
 	// 获取相册列表
 	public getList() {
-		axios.get('album/album')
+		axios.get('album')
 			.then(res => {
 				this.props.album.setList(res.data.data);
 			});

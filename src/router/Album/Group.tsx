@@ -32,23 +32,20 @@ export default class Group extends React.Component<any, IState> {
 	}
 
 	public getAlbums() {
-		axios.get('album/group', {
-			params: {
-				id: this.props.match.params.id,
-			},
-		}).then(res => {
-			this.imgs = res.data.data.map((item: IList) => (
-				item.url
-			));
-			this.setState({
-				list: res.data.data,
-			}, () => {
-				this.allImgLoad(() => {
-					this.msnryInit();
-					this.setState({ opacity: 1 });
-        });
+		axios.get(`album/${this.props.match.params.id}/group`)
+			.then(res => {
+				this.imgs = res.data.data.map((item: IList) => (
+					item.url
+				));
+				this.setState({
+					list: res.data.data,
+				}, () => {
+					this.allImgLoad(() => {
+						this.msnryInit();
+						this.setState({ opacity: 1 });
+					});
+				});
 			});
-		});
 	}
 
 	public allImgLoad(callback: () => void) {

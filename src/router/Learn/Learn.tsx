@@ -21,7 +21,7 @@ export default class Learn extends React.Component<IProps, any> {
   
   // 获取文章列表
 	public getList() {
-		axios.get('learn/list', {
+		axios.get('learn', {
 			params: {
 				page: this.props.learn.page,
 				limit: this.props.learn.limit,

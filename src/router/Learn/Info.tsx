@@ -18,16 +18,13 @@ export default class LearnInfo extends React.Component<any, IState> {
   
   // 获取详情
 	getInfo() {
-		axios.get('learn/info', {
-			params: {
-				id: this.props.match.params.id,
-			},
-		}).then(res => {
-			const data = res.data.data;
-			this.setState({
-				content: data.html,
+		axios.get(`learn/${this.props.match.params.id}`)
+			.then(res => {
+				const data = res.data.data;
+				this.setState({
+					content: data.html,
+				});
 			});
-		});
   }
   
   render() {

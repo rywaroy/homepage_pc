@@ -28,7 +28,7 @@ export default class Think extends React.Component<IPorps, any> {
   }
   
   public getList() {
-		axios('/think/list', {
+		axios('think', {
 			params: {
 				page: this.props.think.page,
 				limit: this.props.think.limit,

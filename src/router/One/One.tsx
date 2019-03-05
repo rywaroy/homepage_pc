@@ -99,7 +99,7 @@ export default class One extends React.Component<IOne, any> {
   // 跳转详情
 	public link(type: string, id: number) {
 		if (type !== '0') {
-			this.props.history.push(`/magazine/one/detail/${type}/${id}`);
+			this.props.history.push(`/one/${type}/${id}`);
 		}
 	}
 

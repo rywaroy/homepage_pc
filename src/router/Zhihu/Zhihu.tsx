@@ -82,7 +82,7 @@ export default class Zhihu extends React.Component<IProps, IState> {
   }
 
   public linkInfo(id: number) {
-		this.props.history.push(`/magazine/zhihu/info/${id}`);
+		this.props.history.push(`/zhihu/${id}`);
   }
   
   render() {

@@ -47,7 +47,7 @@ export default class Learn extends React.Component<IProps, any> {
   
   // 跳转详情
 	linkInfo(id: number) {
-		this.props.history.push(`/blog/learn/info/` + id);
+		this.props.history.push(`/learn/` + id);
   }
   
   public render() {

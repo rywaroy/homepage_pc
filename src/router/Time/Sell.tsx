@@ -32,7 +32,7 @@ export default class Sell extends React.Component<IProps, any> {
   
   // 链接到详情
 	public linkMovieInfo(id: number) {
-		this.props.history.push(`/movie/time/info/${id}`);
+		this.props.history.push(`/time/${id}`);
   }
   
   render() {

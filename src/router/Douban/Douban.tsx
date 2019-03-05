@@ -56,7 +56,7 @@ export default class Douban extends React.Component<any, IProps> {
   
   // 跳转
   public link(id: number) {
-		this.props.history.push(`/movie/douban/info/${id}`);
+		this.props.history.push(`/douban/${id}`);
   }
   
   // 渲染列表

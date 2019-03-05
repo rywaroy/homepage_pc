@@ -23,24 +23,24 @@ export default class Root extends React.Component<any, any> {
   public render() {
     return (
       <Switch>
-        <Route exact={true} path="/magazine/one" component={One} />
-        <Route exact={true} path="/magazine/one/detail/:type/:id" component={OneInfo} />
-        <Route exact={true} path="/magazine/huaban" component={Huaban} />
-        <Route exact={true} path="/magazine/zhihu" component={Zhihu} />
-        <Route exact={true} path="/magazine/zhihu/info/:id" component={ZhihuInfo} />
-        <Route exact={true} path="/movie/time" component={Time} />
-        <Route exact={true} path="/movie/time/info/:id" component={TimeInfo} />
-        <Route exact={true} path="/movie/douban" component={Douban} />
-        <Route exact={true} path="/movie/douban/info/:id" component={DoubanInfo} />
+        <Route exact={true} path="/one" component={One} />
+        <Route exact={true} path="/one/:type/:id" component={OneInfo} />
+        <Route exact={true} path="/huaban" component={Huaban} />
+        <Route exact={true} path="/zhihu" component={Zhihu} />
+        <Route exact={true} path="/zhihu/:id" component={ZhihuInfo} />
+        <Route exact={true} path="/time" component={Time} />
+        <Route exact={true} path="/time/:id" component={TimeInfo} />
+        <Route exact={true} path="/douban" component={Douban} />
+        <Route exact={true} path="/douban/:id" component={DoubanInfo} />
         {/* <Route exact={true} path="/movie/dytt" component={Dytt} /> */}
-        <Route exact={true} path="/blog/learn" component={Learn} />
-        <Route exact={true} path="/blog/learn/info/:id" component={LearnInfo} />
-        <Route exact={true} path="/blog/article" component={Article} />
-        <Route exact={true} path="/blog/article/info/:id" component={ArticleInfo} />
-        <Route exact={true} path="/blog/album" component={Album} />
-				<Route exact={true} path="/blog/album/group/:id" component={Group} />
-        <Route exact={true} path="/blog/think" component={Think} />
-				<Route exact={true} path="/blog/plan" component={Plan} />
+        <Route exact={true} path="/learn" component={Learn} />
+        <Route exact={true} path="/learn/:id" component={LearnInfo} />
+        <Route exact={true} path="/article" component={Article} />
+        <Route exact={true} path="/article/:id" component={ArticleInfo} />
+        <Route exact={true} path="/album" component={Album} />
+				<Route exact={true} path="/album/:id" component={Group} />
+        <Route exact={true} path="/think" component={Think} />
+				<Route exact={true} path="/plan" component={Plan} />
         <Route component={Learn} />
       </Switch>
     )

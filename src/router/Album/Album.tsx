@@ -29,7 +29,7 @@ export default class Album extends React.Component<IPorps, any> {
 
 	// 跳转到相册详情页
 	public linkInfo(id: number) {
-		this.props.history.push(`/blog/album/group/${id}`);
+		this.props.history.push(`/album/${id}`);
 	}
 
 	render() {

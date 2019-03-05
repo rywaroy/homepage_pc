@@ -73,24 +73,24 @@ export default class Sider extends React.Component<any, any> {
 					onOpenChange={this._onOpenChange}
 				>
 					<SubMenu key="magazine" title={<span><Icon type="pie-chart"/><span>杂志</span></span>}>
-						<Menu.Item key="one"><Link to="/magazine/one">ONE · 一个</Link></Menu.Item>
-						<Menu.Item key="huaban"><Link to="/magazine/huaban">花瓣相册</Link></Menu.Item>
-						<Menu.Item key="zhihu"><Link to="/magazine/zhihu">知乎日报</Link></Menu.Item>
+						<Menu.Item key="one"><Link to="/one">ONE · 一个</Link></Menu.Item>
+						<Menu.Item key="huaban"><Link to="/huaban">花瓣相册</Link></Menu.Item>
+						<Menu.Item key="zhihu"><Link to="/zhihu">知乎日报</Link></Menu.Item>
 					</SubMenu>
 					<SubMenu key="movie" title={<span><Icon type="hdd"/><span>电影</span></span>}>
-						<Menu.Item key="time"><Link to="/movie/time">Time时光</Link></Menu.Item>
-						<Menu.Item key="douban"><Link to="/movie/douban">豆瓣电影</Link></Menu.Item>
-						<Menu.Item key="dytt"><Link to="/movie/dytt">电影天堂</Link></Menu.Item>
+						<Menu.Item key="time"><Link to="/time">Time时光</Link></Menu.Item>
+						<Menu.Item key="douban"><Link to="/douban">豆瓣电影</Link></Menu.Item>
+						{/* <Menu.Item key="dytt"><Link to="/dytt">电影天堂</Link></Menu.Item> */}
 					</SubMenu>
-					<SubMenu key="tool" title={<span><Icon type="appstore-o"/><span>工具</span></span>}>
+					{/* <SubMenu key="tool" title={<span><Icon type="appstore-o"/><span>工具</span></span>}>
 						<Menu.Item key="weather"><Link to="/tool/weather">中央天气预报</Link></Menu.Item>
-					</SubMenu>
+					</SubMenu> */}
 					<SubMenu key="blog" title={<span><Icon type="book"/><span>博客</span></span>}>
-						<Menu.Item key="learn"><Link to="/blog/learn">学习</Link></Menu.Item>
-						<Menu.Item key="article"><Link to="/blog/article">日志</Link></Menu.Item>
-						<Menu.Item key="album"><Link to="/blog/album">相册</Link></Menu.Item>
-						<Menu.Item key="think"><Link to="/blog/think">说说</Link></Menu.Item>
-						<Menu.Item key="plan"><Link to="/blog/plan">打卡记录</Link></Menu.Item>
+						<Menu.Item key="learn"><Link to="/learn">学习</Link></Menu.Item>
+						<Menu.Item key="article"><Link to="/article">日志</Link></Menu.Item>
+						<Menu.Item key="album"><Link to="/album">相册</Link></Menu.Item>
+						<Menu.Item key="think"><Link to="/think">说说</Link></Menu.Item>
+						<Menu.Item key="plan"><Link to="/plan">打卡记录</Link></Menu.Item>
 						{/* <Menu.Item key="app"><Link to='/blog/app'>APP下载</Link></Menu.Item> */}
 					</SubMenu>
 				</Menu>

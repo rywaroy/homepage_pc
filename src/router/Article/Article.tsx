@@ -47,7 +47,7 @@ export default class Article extends React.Component<IPorps, any> {
 
 	// 跳转详情
 	linkInfo(id: number) {
-		this.props.history.push(`/blog/article/info/` + id);
+		this.props.history.push(`/article/` + id);
 	}
 
 	render() {

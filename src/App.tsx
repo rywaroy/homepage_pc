@@ -5,12 +5,26 @@ import Routers from './router';
 import Menu from './components/Menu/Menu';
 import Loading from './components/Loading/Loading';
 import { Provider } from 'mobx-react';
+import axios from './utils/axios';
 import store from './store';
 import './App.css';
 
 const {Header, Footer, Sider, Content} = Layout;
 
 class App extends React.Component {
+
+	componentDidMount() {
+		this.getBlogContent();
+	}
+
+	// 获取博客信息
+	getBlogContent() {
+		axios.get('base/content')
+			.then(res => {
+				store.base.setContent(res.data.data);
+			});
+	}
+
   public render() {
     return (
 			<Provider {...store}>
@@ -22,7 +36,7 @@ class App extends React.Component {
 						</Sider>
 						<Layout style={{marginLeft: 200}}>
 							<Header>
-								<div className="header">哈哈</div>
+								<div className="header">{store.base.content.word}</div>
 								<div className="header__mobile">
 									手机端
 									<div className="header__mobile-box">

@@ -4,16 +4,27 @@ import { Link } from 'react-router-dom';
 import './menu.css'
 
 const SubMenu = Menu.SubMenu;
-let open: string = 'magazine';
+let open: string = 'blog';
 let active: string = '';
-const hashArray: string[] = window.location.pathname.split('/');
-if (hashArray.length >= 3) {
-	open = hashArray[1]
-	active = hashArray[2]
+const map = {
+	one: 'magazine',
+	huaban: 'magazine',
+	zhihu: 'magazine',
+	time: 'movie',
+	douban: 'movie',
+	learn: 'blog',
+	article: 'blog',
+	album: 'blog',
+	think: 'blog',
+	plan: 'blog',
 }
-if (hashArray.length === 2) {
-	open = 'blog'
-	active = 'learn'
+const hashArray: string[] = window.location.pathname.split('/');
+
+if (hashArray[1]) {
+	active = hashArray[1];
+	open = map[hashArray[1]];
+} else {
+	active = 'learn';
 }
 
 interface IState {

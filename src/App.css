@@ -43,7 +43,7 @@
   background: url('./assets/phone.png') no-repeat left center;
 }
 
-.header-mobile:hover .header__mobile-box {
+.header__mobile:hover .header__mobile-box {
   display: block;
 }
 

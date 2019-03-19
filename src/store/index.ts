@@ -10,6 +10,7 @@ import Article from './article';
 import Think from './think';
 import Plan from './plan';
 import Album from './album';
+import Base from './base';
 
 const Store = {
   loading: new Loading(),
@@ -24,6 +25,7 @@ const Store = {
   think: new Think(),
   plan: new Plan(),
   album: new Album(),
+  base: new Base(),
 }
 
 export default Store;

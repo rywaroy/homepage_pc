@@ -20,12 +20,13 @@ export default class Douban extends React.Component<any, IProps> {
   }
   
   public getList() {
-    this.props.loading.show();
+		this.props.loading.show();
+		const { city, page, limit } =  this.props.douban;
 		axios.get('douban/list', {
 			params: {
-				city: this.props.douban.city,
-				page: this.props.douban.page,
-				limit: this.props.douban.limit,
+				city,
+				page,
+				limit,
 			},
 		}).then(res => {
       if (document.documentElement) {
@@ -35,9 +36,10 @@ export default class Douban extends React.Component<any, IProps> {
         document.body.scrollTop = 64;
       }
 			setTimeout(() => {
+				const { subjects, total } = res.data.data;
 				this.props.loading.hide();
-				this.props.douban.setList(res.data.data.subjects);
-				this.props.douban.setTotal(res.data.data.total);
+				this.props.douban.setList(subjects);
+				this.props.douban.setTotal(total);
 			}, 1000);
 		});
   }
@@ -97,6 +99,8 @@ export default class Douban extends React.Component<any, IProps> {
   }
   
   render() {
+		const { city, page, limit, total } =  this.props.douban;
+
 		return (
 			<Row>
 				<Col span={1} />
@@ -107,7 +111,7 @@ export default class Douban extends React.Component<any, IProps> {
 							onSearch={this.search.bind(this)}
 							style={{ width: 200 }}
 							className="fl"
-							defaultValue={this.props.douban.city}
+							defaultValue={city}
 						/>
 						<a href="http://www.wandoujia.com/apps/com.douban.movie" target="_blank" className="fr">来源</a>
 					</div>
@@ -118,9 +122,9 @@ export default class Douban extends React.Component<any, IProps> {
 					</div>
 					<Pagination
 						defaultCurrent={1}
-						current={this.props.douban.page}
-						total={this.props.douban.total}
-						pageSize={this.props.douban.limit}
+						current={page}
+						total={total}
+						pageSize={limit}
 						onChange={this._onChange.bind(this)}
 					/>
 

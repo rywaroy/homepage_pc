@@ -100,6 +100,8 @@ export default class Huaban extends React.Component<IHuanban, IState> {
 	}
 
   render() {
+		const { opacity, list } = this.props.huaban;
+
 		return (
 			<Row>
 				<Col span={2}/>
@@ -109,9 +111,9 @@ export default class Huaban extends React.Component<IHuanban, IState> {
 							<Icon type="sync" />&nbsp;&nbsp;&nbsp;&nbsp;<span>换一组</span>
 						</div>
 					</div>
-					<div className="grid huaban" style={{ opacity: this.props.huaban.opacity }}>
+					<div className="grid huaban" style={{ opacity }}>
 						{
-							this.props.huaban.list.map((item, index) => (
+							list.map((item, index) => (
 								<div className="huaban__item grid-item" key={index} onClick={() => this.showImgPreview(index)}>
 									<img src={item.img} width="100%" className="huaban__img" alt="" />
 								</div>

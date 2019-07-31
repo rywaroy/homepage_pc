@@ -21,10 +21,11 @@ export default class Article extends React.Component<IPorps, any> {
 
 	// 获取文章列表
 	getList() {
+		const { page, limit } = this.props.article;
 		axios.get('article', {
 			params: {
-				page: this.props.article.page,
-				limit: this.props.article.limit,
+				page,
+				limit,
 			},
 		}).then(res => {
 			const data = res.data.data;
@@ -51,13 +52,15 @@ export default class Article extends React.Component<IPorps, any> {
 	}
 
 	render() {
+		const { list, total, limit, page} = this.props.article;
+
 		return (
 			<Row>
 				<Col span={2} />
 				<Col span={20}>
 					<div className="article">
 						{
-							this.props.article.list.map((item: IList, index: number) => (
+							list.map((item: IList, index: number) => (
 								<div className="article__item" key={index} onClick={() => {this.linkInfo(item.id)}}>
 									<div className="article__top f-cb">
 										<div className="article__name fl">{item.title}</div>
@@ -78,14 +81,14 @@ export default class Article extends React.Component<IPorps, any> {
 							))
 						}
 						{
-							this.props.article.total / this.props.article.limit <= 1 ?
+							total / limit <= 1 ?
 								null
 								:
 								<div className="article__page">
 									<Pagination
-										current={this.props.article.page}
-										total={this.props.article.total}
-										pageSize={this.props.article.limit}
+										current={page}
+										total={total}
+										pageSize={limit}
 										onChange={this._onChange.bind(this)}
 									/>
 								</div>

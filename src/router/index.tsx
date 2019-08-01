@@ -17,7 +17,7 @@ import ArticleInfo from './Article/Info';
 import Album from './Album/Album';
 import Group from './Album/Group';
 import Think from './Think/Think';
-import Plan from './Plan/Plan';
+// import Plan from './Plan/Plan';
 
 export default class Root extends React.Component<any, any> {
   public render() {
@@ -40,7 +40,7 @@ export default class Root extends React.Component<any, any> {
         <Route exact={true} path="/album" component={Album} />
 				<Route exact={true} path="/album/:id" component={Group} />
         <Route exact={true} path="/think" component={Think} />
-				<Route exact={true} path="/plan" component={Plan} />
+				{/* <Route exact={true} path="/plan" component={Plan} /> */}
         <Route component={Learn} />
       </Switch>
     )

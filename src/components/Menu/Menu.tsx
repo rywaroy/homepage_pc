@@ -101,7 +101,7 @@ export default class Sider extends React.Component<any, any> {
 						<Menu.Item key="article"><Link to="/article">日志</Link></Menu.Item>
 						<Menu.Item key="album"><Link to="/album">相册</Link></Menu.Item>
 						<Menu.Item key="think"><Link to="/think">说说</Link></Menu.Item>
-						<Menu.Item key="plan"><Link to="/plan">打卡记录</Link></Menu.Item>
+						{/* <Menu.Item key="plan"><Link to="/plan">打卡记录</Link></Menu.Item> */}
 						{/* <Menu.Item key="app"><Link to='/blog/app'>APP下载</Link></Menu.Item> */}
 					</SubMenu>
 				</Menu>

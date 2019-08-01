@@ -28,14 +28,16 @@ export default class Think extends React.Component<IPorps, any> {
   }
   
   public getList() {
+		const { page, limit } = this.props.think;
 		axios('think', {
 			params: {
-				page: this.props.think.page,
-				limit: this.props.think.limit,
+				page,
+				limit,
 			},
 		}).then(res => {
-			this.props.think.setList(res.data.data.list);
-			this.props.think.setTotal(res.data.data.count);
+			const { list, count } = res.data.data;
+			this.props.think.setList(list);
+			this.props.think.setTotal(count);
 			setTimeout(() => {
 				this.msnryInit()
 			}, 0);
@@ -63,13 +65,15 @@ export default class Think extends React.Component<IPorps, any> {
   }
   
   render() {
+		const { list, total, limit, page} = this.props.think;
+
 		return (
 			<Row>
 				<Col span={2} />
 				<Col span={20}>
           <div className="think__box grid">
 						{
-							this.props.think.list.map((item: IList, index: number) => (
+							list.map((item: IList, index: number) => (
 								<div className="think__item grid-item" key={index}>
 									<div className="think__item-top f-cb">
 										<div className="think__item-avatar fl bg-cover" style={{backgroundImage: `url(${item.avatar})`}} />
@@ -94,14 +98,14 @@ export default class Think extends React.Component<IPorps, any> {
 						}
 					</div>
 					{
-						this.props.think.total / this.props.think.limit <= 1 ?
+						total / limit <= 1 ?
 							null
 							:
 							<div className="think__page">
 								<Pagination
-									current={this.props.think.page}
-									total={this.props.think.total}
-									pageSize={this.props.think.limit}
+									current={page}
+									total={total}
+									pageSize={limit}
 									onChange={this._onChange.bind(this)}
 								/>
 							</div>

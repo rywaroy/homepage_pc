@@ -21,15 +21,16 @@ export default class Learn extends React.Component<IProps, any> {
   
   // 获取文章列表
 	public getList() {
+		const { page, limit } = this.props.learn;
 		axios.get('learn', {
 			params: {
-				page: this.props.learn.page,
-				limit: this.props.learn.limit,
+				page,
+				limit,
 			},
 		}).then(res => {
-			const data = res.data.data;
-			this.props.learn.setList(data.list);
-			this.props.learn.setTotal(data.total);
+			const { list, total } = res.data.data;
+			this.props.learn.setList(list);
+			this.props.learn.setTotal(total);
 		});
   }
   
@@ -51,13 +52,15 @@ export default class Learn extends React.Component<IProps, any> {
   }
   
   public render() {
+		const { list, total, limit, page} = this.props.learn;
+
 		return (
 			<Row>
 				<Col span={2}/>
 				<Col span={20}>
 					<div className="learn">
 						{
-							this.props.learn.list.map((item: IList, index: number) => (
+							list.map((item: IList, index: number) => (
 								<div className="learn__item" key={index} onClick={() => { this.linkInfo(item.id); }}>
 									<div className="learn__top f-cb">
 										<div className="learn__name fl">{item.title}</div>
@@ -69,14 +72,14 @@ export default class Learn extends React.Component<IProps, any> {
 							))
 						}
 						{
-							this.props.learn.total / this.props.learn.limit <= 1 ?
+							total / limit <= 1 ?
 								null
 								:
 								<div className="learn__page">
 									<Pagination
-										current={this.props.learn.page}
-										total={this.props.learn.total}
-										pageSize={this.props.learn.limit}
+										current={page}
+										total={total}
+										pageSize={limit}
 										onChange={this._onChange.bind(this)} />
 								</div>
 						}

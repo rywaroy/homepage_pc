@@ -4,4 +4,5 @@ export interface IList {
   content: string
   photos: string[]
   time: string
+  updatedAt: string
 }

@@ -7,4 +7,5 @@ export interface IList {
   html: string
   tag: string
   id: number
+  updatedAt: string
 }

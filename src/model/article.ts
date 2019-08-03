@@ -6,6 +6,7 @@ export interface IList {
   tag: ITag
   id: number
   top: number
+  updatedAt: string
 }
 
 export interface IInfoState {

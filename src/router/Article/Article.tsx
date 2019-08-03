@@ -64,7 +64,7 @@ export default class Article extends React.Component<IPorps, any> {
 								<div className="article__item" key={index} onClick={() => {this.linkInfo(item.id)}}>
 									<div className="article__top f-cb">
 										<div className="article__name fl">{item.title}</div>
-										<div className="article__time fr">{dayjs(item.time).format('YYYY-MM-DD')}</div>
+										<div className="article__time fr">{dayjs(item.updatedAt).format('YYYY-MM-DD')}</div>
 										<div className="article__tag fr" style={{ backgroundColor: item.tag.color }}>{item.tag.title}</div>
 										{
 											item.top > 0 ?

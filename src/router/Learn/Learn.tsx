@@ -64,7 +64,7 @@ export default class Learn extends React.Component<IProps, any> {
 								<div className="learn__item" key={index} onClick={() => { this.linkInfo(item.id); }}>
 									<div className="learn__top f-cb">
 										<div className="learn__name fl">{item.title}</div>
-										<div className="learn__time fr">{dayjs(item.time).format('YYYY-MM-DD')}</div>
+										<div className="learn__time fr">{dayjs(item.updatedAt).format('YYYY-MM-DD')}</div>
 										<div className="learn__tag fr">{item.tag}</div>
 									</div>
 									<div className="learn__content">{item.intro}</div>

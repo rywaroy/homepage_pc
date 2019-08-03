@@ -92,7 +92,7 @@ export default class Think extends React.Component<IPorps, any> {
 											:
 											null
 									}
-									<div className="think__item-time">{dayjs(item.time).format('YYYY-MM-DD hh:mm')}</div>
+									<div className="think__item-time">{dayjs(item.updatedAt).format('YYYY-MM-DD hh:mm')}</div>
 								</div>
 							))
 						}

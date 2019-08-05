@@ -7,6 +7,7 @@ export interface IList {
   id: number
   top: number
   updatedAt: string
+  img: string
 }
 
 export interface IInfoState {

@@ -79,7 +79,9 @@ export default class Article extends React.Component<IPorps, any> {
 								// 	</div>
 								// </div>
 								<div className="article__item" key={index} onClick={() => {this.linkInfo(item.id)}}>
-									<div className="article__img bg-cover" style={{backgroundImage: `url(${item.img})`}} />
+									<div className="article__img-box">
+										<div className="article__img bg-cover" style={{backgroundImage: `url(${item.img})`}} />
+									</div>
 									<div className="article__content">
 									 	<div className="article__top f-cb">
 								 			

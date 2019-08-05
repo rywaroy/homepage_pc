@@ -72,6 +72,7 @@
 .article__img {
   width: 100%;
   padding-bottom: 80%;
+  transition: transform .3s;
 }
 
 .article__content {
@@ -86,4 +87,12 @@
   min-height: 20px;
   margin-bottom: 0;
   margin-top: 6px;
+}
+
+.article__img-box {
+  overflow: hidden;
+}
+
+.article__item:hover .article__img {
+  transform: scale(1.2);
 }

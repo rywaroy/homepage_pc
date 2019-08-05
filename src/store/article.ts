@@ -5,7 +5,7 @@ export default class Article {
 
   @observable public list: IList[] = [];
   @observable public page: number = 1;
-  @observable public limit: number = 10;
+  @observable public limit: number = 9;
   @observable public total: number = 0;
 
   @action

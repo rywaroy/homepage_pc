@@ -4,10 +4,13 @@
 
 .article__item {
   background: #fff;
-  padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
   cursor: pointer;
+  width: 30%;
+  float: left;
+  margin-right: 2%;
+  overflow: hidden;
 }
 
 .article__top {
@@ -17,6 +20,10 @@
 
 .article__name {
   color: #333;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  margin-top: 4px;
 }
 
 .article__time {
@@ -28,16 +35,10 @@
   height: 24px;
   font-size: 14px;
   line-height: 24px;
-  color: #fff;
+  color: #999;
   border-radius: 4px;
   margin-right: 8px;
   margin-top: 3px;
-}
-
-.article__content {
-  font-size: 13px;
-  line-height: 26px;
-  color: #666
 }
 
 .article__watch {
@@ -66,4 +67,23 @@
 
 .comment__form-content {
   margin-bottom: 10px;
+}
+
+.article__img {
+  width: 100%;
+  padding-bottom: 80%;
+}
+
+.article__content {
+  background: #fff;
+  padding: 10px;
+}
+
+.article__intro {
+  font-size: 14px;
+  color: #666;
+  line-height: 20px;
+  min-height: 20px;
+  margin-bottom: 0;
+  margin-top: 6px;
 }

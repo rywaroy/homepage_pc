@@ -61,23 +61,6 @@ export default class Article extends React.Component<IPorps, any> {
 					<div className="article f-cb">
 						{
 							list.map((item: IList, index: number) => (
-								// <div className="article__item" key={index} onClick={() => {this.linkInfo(item.id)}}>
-								// 	<div className="article__top f-cb">
-								// 		<div className="article__name fl">{item.title}</div>
-								// 		<div className="article__time fr">{dayjs(item.updatedAt).format('YYYY-MM-DD')}</div>
-								// 		<div className="article__tag fr" style={{ backgroundColor: item.tag.color }}>{item.tag.title}</div>
-								// 		{
-								// 			item.top > 0 ?
-								// 				<div className="article__tag fr" style={{ backgroundColor: '#FFD700' }}>置顶</div>
-								// 				:
-								// 				null
-								// 		}
-								// 	</div>
-								// 	<div className="article__content">{item.intro}</div>
-								// 	<div className="article__bot f-cb">
-								// 		<div className="article__watch fr">{item.watch}</div>
-								// 	</div>
-								// </div>
 								<div className="article__item" key={index} onClick={() => {this.linkInfo(item.id)}}>
 									<div className="article__img-box">
 										<div className="article__img bg-cover" style={{backgroundImage: `url(${item.img})`}} />

@@ -7,7 +7,7 @@
   margin-bottom: 20px;
   border-radius: 8px;
   cursor: pointer;
-  width: 30%;
+  width: 23%;
   float: left;
   margin-right: 2%;
   overflow: hidden;
@@ -42,10 +42,10 @@
 }
 
 .article__watch {
-  padding-left: 25px;
+  padding-left: 18px;
   background: url('./images/watch.png') no-repeat left center;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 30px;
   color: #333;
 }
 
@@ -95,4 +95,11 @@
 
 .article__item:hover .article__img {
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 1400px) {
+  .article__item {
+    width: 30%;
+    margin-right: 3%;
+  }
 }

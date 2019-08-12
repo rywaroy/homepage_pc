@@ -5,7 +5,13 @@ export interface IList {
   state: number
   md: string
   html: string
-  tag: string
+  sign: string
+  tag: ITag
   id: number
   updatedAt: string
+}
+
+export interface ITag {
+  title: string
+  color: string
 }

@@ -52,7 +52,7 @@ export default class Article extends React.Component<IPorps, any> {
 	}
 
 	render() {
-		const { list, total, limit, page} = this.props.article;
+		const { list, total, limit, page } = this.props.article;
 
 		return (
 			<Row>

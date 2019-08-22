@@ -56,11 +56,11 @@ export default class Think extends React.Component<IPorps, any> {
 	public _onChange(page: number) {
 		this.props.think.setPage(page);
 		if (document.documentElement) {
-      document.documentElement.scrollTop = 64;
-    }
-    if (document.body.scrollTop) {
-      document.body.scrollTop = 64;
-    }
+			document.documentElement.scrollTop = 64;
+		}
+    	if (document.body.scrollTop) {
+      		document.body.scrollTop = 64;
+    	}
 		this.getList();
   }
   
@@ -71,7 +71,7 @@ export default class Think extends React.Component<IPorps, any> {
 			<Row>
 				<Col span={2} />
 				<Col span={20}>
-          <div className="think__box grid">
+          			<div className="think__box grid">
 						{
 							list.map((item: IList, index: number) => (
 								<div className="think__item grid-item" key={index}>

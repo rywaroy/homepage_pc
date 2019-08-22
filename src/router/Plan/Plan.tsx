@@ -16,11 +16,11 @@ interface IPorps extends RouteComponentProps {
 @observer
 export default class Plan extends React.Component<IPorps, any> {
 
-  componentDidMount() {
+  	componentDidMount() {
 		this.props.plan.list.length === 0 && this.getAnalysis();
-  }
+  	}
   
-  getAnalysis() {
+  	getAnalysis() {
 		axios.get('plan/analysis')
 			.then(res => {
 				const data = res.data.data;
@@ -39,32 +39,32 @@ export default class Plan extends React.Component<IPorps, any> {
       data: ['已打卡', '未打卡'],
     },
     series : [
-      {
-				name: '打卡记录',
-				type: 'pie',
-				radius : '55%',
-				center: ['50%', '60%'],
-				data: [
-					{ value: data.successTotal, name: '已打卡' },
-					{value: data.failTotal, name: '未打卡'},
-				],
-				color: ['#1FB2F1', '#C91130'],
-				itemStyle: {
-					emphasis: {
-					shadowBlur: 10,
-					shadowOffsetX: 0,
-					shadowColor: 'rgba(0, 0, 0, 0.5)',
-					}
-				},
-      },
+      	{
+			name: '打卡记录',
+			type: 'pie',
+			radius : '55%',
+			center: ['50%', '60%'],
+			data: [
+				{ value: data.successTotal, name: '已打卡' },
+				{value: data.failTotal, name: '未打卡'},
+			],
+			color: ['#1FB2F1', '#C91130'],
+			itemStyle: {
+				emphasis: {
+				shadowBlur: 10,
+				shadowOffsetX: 0,
+				shadowColor: 'rgba(0, 0, 0, 0.5)',
+				}
+			},
+      	},
     ]
 	});
 	
 	public getOptionLine = (data: IList) => ({
 		title: {
-      text: data.title,
-      x: 'left',
-    },
+			text: data.title,
+			x: 'left',
+		},
 		legend: {
 			data: ['本月打卡数', '本月未打卡数'],
 		},
@@ -76,11 +76,11 @@ export default class Plan extends React.Component<IPorps, any> {
 			type: 'value',
 		},
 		tooltip: {
-      trigger: 'axis',
+      		trigger: 'axis',
 			axisPointer : {            // 坐标轴指示器，坐标轴触发有效
 				type : 'shadow', // 默认为直线，可选为：'line' | 'shadow'
 			},
-    },
+    	},
 		series: [
 			{
 				name: '本月打卡数',

@@ -19,10 +19,10 @@ export default class ZhihuInfo extends React.Component<any, IState> {
     comment: [],
   }
 
-  componentDidMount() {
+	componentDidMount() {
 		this.getInfo();
 		this.getComment();
-  }
+	}
   
   public getInfo() {
 		axios.get(`https://api.isoyu.com/index.php/api/Zhihu/news?id=${this.props.match.params.id}`)

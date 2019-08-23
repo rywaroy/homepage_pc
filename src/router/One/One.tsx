@@ -105,29 +105,29 @@ export default class One extends React.Component<IOne, any> {
 
   public render() {
     return (
-      <Row>
-				<Col span={2}/>
-				<Col span={20}>
-					<div className="one__content">
-						<div className="one__header f-cb">
-							<a href="http://www.wandoujia.com/apps/one.hh.oneclient" target="_blank" className="one__from">来源</a>
-							<div className="one__last fr f-cb">
-								<div className="fl">往期内容：</div>
-								<DatePicker
-                  placeholder={'选择日期'}
-									onChange={this.onTimeChange.bind(this)}
-                  disabledDate={this.getDisabledDate}/>
-							</div>
-						</div>
-						<div style={{marginBottom: '16px'}}>
-							<Row gutter={16}>
-								{this.renderList()}
-							</Row>
+      	<Row>
+			<Col span={2}/>
+			<Col span={20}>
+				<div className="one__content">
+					<div className="one__header f-cb">
+						<a href="http://www.wandoujia.com/apps/one.hh.oneclient" target="_blank" className="one__from">来源</a>
+						<div className="one__last fr f-cb">
+							<div className="fl">往期内容：</div>
+							<DatePicker
+				placeholder={'选择日期'}
+								onChange={this.onTimeChange.bind(this)}
+				disabledDate={this.getDisabledDate}/>
 						</div>
 					</div>
-				</Col>
-				<Col span={2} />
-			</Row>
+					<div style={{marginBottom: '16px'}}>
+						<Row gutter={16}>
+							{this.renderList()}
+						</Row>
+					</div>
+				</div>
+			</Col>
+			<Col span={2} />
+		</Row>
     )
   }
 }

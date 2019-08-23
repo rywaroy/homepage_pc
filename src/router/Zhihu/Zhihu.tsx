@@ -21,24 +21,24 @@ interface IState {
 @observer
 export default class Zhihu extends React.Component<IProps, IState> {
 
-  tImg: any
-  msnry: any
-  isLoad: boolean = false
+  	tImg: any
+  	msnry: any
+  	isLoad: boolean = false
 
-  state: IState = {
-    opacity: 0,
-  }
+  	state: IState = {
+    	opacity: 0,
+  	}
 
-  public componentDidMount() {
-    if (this.props.zhihu.list.length === 0) {
-      this.getList();
-    } else {
-      this.msnryInit();
-			this.setState({ opacity: 1 });
-    }
-  }
+  	public componentDidMount() {
+		if (this.props.zhihu.list.length === 0) {
+		this.getList();
+		} else {
+		this.msnryInit();
+				this.setState({ opacity: 1 });
+		}
+	}
 
-  public getList() {
+  	public getList() {
 		this.props.loading.show()
 		axios.get('https://api.isoyu.com/index.php/api/Zhihu/zhihu_daily')
 			.then(res => {
@@ -50,24 +50,24 @@ export default class Zhihu extends React.Component<IProps, IState> {
 					this.setState({ opacity: 1 });
 				});
 			});
-  }
+ 	}
 
-  public msnryInit() {
-    this.msnry = new Masonry('.grid', {
+  	public msnryInit() {
+		this.msnry = new Masonry('.grid', {
 			columnWidth: 300,
 			itemSelector: '.grid-item',
 			gutter: 10,
 		});
-  }
+  	}
   
-  public allImgLoad(callback: () => void) {
-    const imgs: NodeListOf<HTMLElement> = document.querySelectorAll('.zhihu__img');
-    for (let i = 0; i < imgs.length; i++) {
-      if (imgs[i].offsetHeight === 0) {
-        this.isLoad = false;
-        break;
-      }
-    }
+  	public allImgLoad(callback: () => void) {
+    	const imgs: NodeListOf<HTMLElement> = document.querySelectorAll('.zhihu__img');
+		for (let i = 0; i < imgs.length; i++) {
+			if (imgs[i].offsetHeight === 0) {
+				this.isLoad = false;
+				break;
+			}
+		}
 		if (this.isLoad) {
 			clearTimeout(this.tImg); // 清除定时器
 			// 回调函数
@@ -79,13 +79,13 @@ export default class Zhihu extends React.Component<IProps, IState> {
 				this.allImgLoad(callback); // 递归扫描
 			}, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
 		}
-  }
+  	}
 
-  public linkInfo(id: number) {
+  	public linkInfo(id: number) {
 		this.props.history.push(`/zhihu/${id}`);
-  }
+  	}
   
-  render() {
+  	render() {
 		return (
 			<Row>
 				<Col span={2} />

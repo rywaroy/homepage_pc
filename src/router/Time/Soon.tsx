@@ -14,11 +14,11 @@ interface IProps extends RouteComponentProps {
 @observer
 export default class Soon extends React.Component<IProps, any> {
   
-  componentDidMount() {
-    this.props.time.soon.length === 0 && this.getList();
-  }
+	componentDidMount() {
+		this.props.time.soon.length === 0 && this.getList();
+	}
 
-  // 获取列表
+  	// 获取列表
 	public getList() {
 		this.props.loading.show();
 		axios.get('time/soon')
@@ -28,14 +28,14 @@ export default class Soon extends React.Component<IProps, any> {
 					this.props.loading.hide();
 				}, 1000);
 			});
-  }
+  	}
   
-  // 链接到详情
+  	// 链接到详情
 	public linkMovieInfo(id: number) {
 		this.props.history.push(`/time/${id}`);
-  }
+  	}
   
-  render() {
+  	render() {
 		return (
 			<div className="card__tab f-cb">
 				{

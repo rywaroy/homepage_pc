@@ -15,12 +15,12 @@ export default class OneInfo extends React.Component<any, IOneInfo> {
   constructor(props: any) {
     super(props);
     this.state = {
-      type: this.props.match.params.type,
-			id: this.props.match.params.id,
-			content: '',
-			replyList: [],
-			title: '',
-			author: '',
+      	type: this.props.match.params.type,
+		id: this.props.match.params.id,
+		content: '',
+		replyList: [],
+		title: '',
+		author: '',
     }
   }
 

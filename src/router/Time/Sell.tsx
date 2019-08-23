@@ -14,11 +14,11 @@ interface IProps extends RouteComponentProps {
 @observer
 export default class Sell extends React.Component<IProps, any> {
   
-  componentDidMount() {
-    this.props.time.sell.length === 0 && this.getList();
-  }
+  	componentDidMount() {
+    	this.props.time.sell.length === 0 && this.getList();
+  	}
 
-  // 获取列表
+  	// 获取列表
 	public getList() {
 		this.props.loading.show();
 		axios.get('time/sell')
@@ -30,10 +30,10 @@ export default class Sell extends React.Component<IProps, any> {
 			});
   }
   
-  // 链接到详情
+  	// 链接到详情
 	public linkMovieInfo(id: number) {
 		this.props.history.push(`/time/${id}`);
-  }
+  	}
   
   render() {
 		return (

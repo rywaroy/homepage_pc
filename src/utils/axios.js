@@ -10,7 +10,7 @@ const Axios = axios.create({
 		'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
 	},
 	responseType: 'json',
-	timeout: 10000,
+	timeout: 100000,
 });
 
 // POST传参序列化(添加请求拦截器)

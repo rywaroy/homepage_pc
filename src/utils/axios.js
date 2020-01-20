@@ -5,7 +5,8 @@ import store from '../store';
 const Axios = axios.create({
 	// baseURL: 'http://localhost:3001/api/',
 	// baseURL: 'http://www.3zsd.com/api/',
-	baseURL: 'https://www.3zsd.com/api/',
+	// baseURL: 'https://www.3zsd.com/api/',
+	baseURL: 'https://www.zzh.cool/api/',
 	headers: {
 		'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
 	},

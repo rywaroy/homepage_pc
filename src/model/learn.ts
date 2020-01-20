@@ -9,6 +9,7 @@ export interface IList {
   tag: ITag
   id: number
   updatedAt: string
+  createdAt: string
 }
 
 export interface ITag {

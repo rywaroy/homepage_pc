@@ -8,6 +8,7 @@ export interface IList {
   top: number
   updatedAt: string
   img: string
+  createdAt: string
 }
 
 export interface IInfoState {

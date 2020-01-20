@@ -68,7 +68,7 @@ export default class Article extends React.Component<IPorps, any> {
 									<div className="article__content">
 									 	<div className="article__top f-cb">
 								 			
-								 			<div className="article__time fl">{dayjs(item.updatedAt).format('YYYY-MM-DD')}</div>
+								 			<div className="article__time fl">{dayjs(item.createdAt).format('YYYY-MM-DD')}</div>
 											<div className="article__tag fl">「{item.tag.title}」</div>
 											<div className="article__watch fr">{item.watch}</div>
 										</div>

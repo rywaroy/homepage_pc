@@ -96,7 +96,7 @@ export default class Sider extends React.Component<any, any> {
 					{/* <SubMenu key="tool" title={<span><Icon type="appstore-o"/><span>工具</span></span>}>
 						<Menu.Item key="weather"><Link to="/tool/weather">中央天气预报</Link></Menu.Item>
 					</SubMenu> */}
-					<SubMenu key="blog" title={<span><Icon type="book"/><span>博客</span></span>}>
+					<SubMenu key="blog" title={<span><Icon type="book"/><span>个人</span></span>}>
 						<Menu.Item key="learn"><Link to="/learn">学习</Link></Menu.Item>
 						<Menu.Item key="article"><Link to="/article">日志</Link></Menu.Item>
 						<Menu.Item key="album"><Link to="/album">相册</Link></Menu.Item>
